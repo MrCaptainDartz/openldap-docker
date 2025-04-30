@@ -2,7 +2,7 @@
 
 ## TL;DR
 This project provides a Dockerfile and scripts used to build a docker image from official openldap sources
-This work is partially based on the [Bitnami OpenLDAP image](https://github.com/bitnami/containers/tree/main/bitnami/openldap), except the build-from-source part, and therefore uses the same environment variable names
+This work is partially based on the [Bitnami OpenLDAP image](https://github.com/bitnami/containers/tree/main/bitnami/openldap), except the build from source part, and therefore uses the same environment variable names
 
 ## What is OpenLDAP?
 
@@ -14,10 +14,12 @@ This work is partially based on the [Bitnami OpenLDAP image](https://github.com/
 
 This project was made with the goal of building OpenLDAP from source. No pre-built images are available on Docker Repositories.
 
+### Prerequisites
 1. Clone this repository and cd into it
 2. Change the first line of the Dockerfile ```ARG OPENLDAP_VERSION=<version>``` and replace version using the one you want to build (This dockerfile has been tested only on 2.6.9)
 3. Change the second line of the Dockerfile ```ARG DOWNLOAD_MIRROR="<mirror_url>"``` and replace mirror_url using the one you want. You can find some of them directly on [OpenLDAP Website](https://www.openldap.org/software/download/)
-4. 
+
+### Build
 * To build directly using docker compose, please see [this example](#using-a-docker-compose-file)
 * To build from command line :
 ```console
