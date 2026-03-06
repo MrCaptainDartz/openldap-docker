@@ -71,6 +71,7 @@ volumes:
 > 2. Please update the **<version>** placeholder in the above snippet with the path to this repository
 > 3. Please update the **YOUR_APPLICATION_IMAGE** placeholder in the above snippet with your application image
 > 4. In your application container, use the hostname `openldap` to connect to the OpenLDAP server
+> 5. If you're willing to **map a directory** instead of using a docker volume, your folder on the host needs to be owned by user **1001:1001**
 
 Launch the containers using:
 

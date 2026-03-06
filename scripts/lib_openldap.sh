@@ -438,7 +438,8 @@ ldap_configure_permissions() {
 #########################
 ldap_initialize() {
     echo "Initializing OpenLDAP..."
-
+    mkdir -p "$LDAP_DATA_DIR"
+    mkdir -p "$LDAP_ONLINE_CONF_DIR"
     ldap_configure_permissions
     if ! is_dir_empty "$LDAP_DATA_DIR"; then
         echo "Using persisted data"
